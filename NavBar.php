@@ -1,33 +1,48 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+<nav class="navbar navbar-light" style="background-color: #B4C3BA;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Beauty Store</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <a class="navbar-brand" href="#">
+  <img src="assets/logo.png" alt="" width="70" height="70" class="d-inline-block align-text-top">
+  <img src="assets/Beauty.png" alt="" width="250" height="70" class="d-inline-block align-text-top">
+     
+  
+
+  <a class="navbar-brand" href="index.php"> </a>
+
+  <ul class="nav justify-content-end">
+   <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
         </li>
-      </ul>
-      <form class="d-flex">
-        <?php 
-          session_start();
-          if(isset($_SESSION) && isset($_SESSION['id'])){
-            echo  "<a class='btn disabled btn' href='#'>".$_SESSION['username']."</a>";
-            echo "<a class='btn btn-danger' href='LogOut.php'>Log Out</a>";
-          }
-          else{
-            echo "<a class='btn btn-primary' href='LogIn.php'>Log In</a>";
-            echo "<a class='btn btn-success' href='SignIn.php'>Sign In</a>";
-            session_destroy();
-          }
-        ?>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
+        </li>
+    
+    
+    <?php 
+        session_start();
         
+        if(isset($_SESSION) && isset($_SESSION['id'])){
+          echo "<li class='nav-item'>";
+          echo  "<a class='btn btn-outline-success me-2' href='#'>".$_SESSION['username']."</a>";
+          echo "</li>";
+          echo "<li class='nav-item'>";
+          echo "<a class='btn btn-danger' href='LogOut.php'>Log Out</a>";
+          echo "</li>";
 
-       
-        
-      </form>
-    </div>
+        }
+        else{
+          echo "<li class='nav-item '>";
+          echo "<a class='btn btn-outline-success me-2' href='LogIn.php'>Log In</a>";
+          echo "</li>";
+          echo "<li class='nav-item'>";
+          echo "<a class='btn btn-success' href='SignIn.php'>Sign up</a>";
+          echo "</li>";
+          session_destroy();
+        }
+      ?>
+        </ul>    
   </div>
 </nav>

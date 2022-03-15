@@ -16,7 +16,7 @@ $result = $conn->query($sql);
 </head>
 
 <body>
-    <?php include 'NavBar.php' ?>
+ <?php include 'NavBar.php' ?>
     <div class="container">
     <h1>Beauty Store </h1>
         <table class="table">
