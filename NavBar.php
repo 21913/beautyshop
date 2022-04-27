@@ -10,16 +10,7 @@
   <a class="navbar-brand" href="index.php"> </a>
 
   <ul class="nav justify-content-end">
-   <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="NewProduct.php">New Product</a>
-        </li>
-    
+     
     
     <?php 
         session_start();

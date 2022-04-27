@@ -19,3 +19,5 @@ $conn->close();
 header("Location: index.php");
 
 ?>
+
+<?php include 'NavBar.php' ?>
